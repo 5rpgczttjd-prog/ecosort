@@ -1,0 +1,237 @@
+import { MunicipalityPreset } from '../types';
+
+export const MUNICIPALITY_PRESETS: MunicipalityPreset[] = [
+  {
+    id: 'san-francisco',
+    name: 'San Francisco',
+    region: 'California, USA',
+    country: 'USA',
+    streamType: 'single-stream',
+    curbsideOrganics: true,
+    curbsideGlass: true,
+    acceptsPlasticBagsCurbside: false,
+    binColors: {
+      recycle: 'Blue',
+      compost: 'Green',
+      trash: 'Black',
+    },
+    specialNotes: 'Mandatory composting citywide (Recology). Food-soiled paper and greasy pizza boxes go in the Green Cart. Soft plastic film/bags must be dropped off at participating grocery stores.',
+    keyRulesSummary: [
+      'Food-soiled paper, greasy pizza boxes & paper napkins go in Green Compost Cart',
+      'All rigid plastics, glass bottles/jars, metal cans, and clean paper go in Blue Cart',
+      'No plastic bags or film in Blue Cart (drop off at store return bins)',
+      'Plastic lids and small items under 2 inches go in Black Cart (trash)',
+    ],
+  },
+  {
+    id: 'new-york-city',
+    name: 'New York City',
+    region: 'New York, USA',
+    country: 'USA',
+    streamType: 'dual-stream',
+    curbsideOrganics: true,
+    curbsideGlass: true,
+    acceptsPlasticBagsCurbside: false,
+    binColors: {
+      recycle: 'Blue (Metal/Glass/Plastic) & Green (Paper/Cardboard)',
+      compost: 'Brown (Curbside Composting)',
+      trash: 'Clear/Black Bag (Trash)',
+    },
+    specialNotes: 'DSNY dual-stream system: Blue bin/label for metal, glass, plastic & cartons. Green bin/label for clean paper and cardboard. Curbside composting is mandatory across all 5 boroughs.',
+    keyRulesSummary: [
+      'Blue Bin: Metal, glass, rigid plastics (bottles, jugs, cups, containers) & beverage cartons',
+      'Green Bin: Mixed paper, flattened corrugated cardboard, newspapers & catalogs',
+      'Brown Bin: Food scraps, food-soiled paper, leaves & yard trimmings',
+      'No foam polystyrene (#6), plastic wrappers, or tanglers in blue bin',
+    ],
+  },
+  {
+    id: 'seattle',
+    name: 'Seattle',
+    region: 'Washington, USA',
+    country: 'USA',
+    streamType: 'single-stream',
+    curbsideOrganics: true,
+    curbsideGlass: true,
+    acceptsPlasticBagsCurbside: false,
+    binColors: {
+      recycle: 'Blue',
+      compost: 'Green (Food & Yard Waste)',
+      trash: 'Grey/Black',
+    },
+    specialNotes: 'Seattle Public Utilities has strict zero-waste mandates. Compostable items cannot be placed in the garbage. Greasy pizza boxes go in food/yard waste.',
+    keyRulesSummary: [
+      'Food scraps and greasy pizza boxes belong strictly in the Green Food/Yard waste cart',
+      'Empty, clean, and dry plastic containers #1, #2, #5, paper, cardboard, and cans in Blue Cart',
+      'Items smaller than 3 inches (e.g. bread tags, loose bottle caps) go to garbage unless caps are screwed tightly onto bottles',
+      'Plastic bags must be bundled together or taken to drop-off centers',
+    ],
+  },
+  {
+    id: 'toronto',
+    name: 'Toronto',
+    region: 'Ontario, Canada',
+    country: 'Canada',
+    streamType: 'single-stream',
+    curbsideOrganics: true,
+    curbsideGlass: true,
+    acceptsPlasticBagsCurbside: true,
+    binColors: {
+      recycle: 'Blue Bin',
+      compost: 'Green Bin (Organics)',
+      trash: 'Black/Grey Bin (Garbage)',
+    },
+    specialNotes: 'City of Toronto Solid Waste Management. Important note: Black-colored plastics are NOT accepted in the Blue Bin because optical sorting machines cannot detect the carbon black pigment.',
+    keyRulesSummary: [
+      'Blue Bin: Glass bottles, metal cans, rigid plastic containers (non-black only), cartons, paper',
+      'Black plastic containers & coffee cup lids go directly into the Garbage Bin',
+      'Coffee cups (paper) go into Garbage in Toronto; sleeves in Blue Bin',
+      'Green Bin: Food waste, bones, pet waste, soiled tissues and paper towels',
+    ],
+  },
+  {
+    id: 'austin',
+    name: 'Austin',
+    region: 'Texas, USA',
+    country: 'USA',
+    streamType: 'single-stream',
+    curbsideOrganics: true,
+    curbsideGlass: true,
+    acceptsPlasticBagsCurbside: false,
+    binColors: {
+      recycle: 'Blue Cart',
+      compost: 'Green Cart (Curbside Composting)',
+      trash: 'Brown Cart',
+    },
+    specialNotes: 'Austin Resource Recovery single-stream recycling. Food scraps and yard trimmings in green cart. No styrofoam or plastic bags in blue cart.',
+    keyRulesSummary: [
+      'Blue Cart: All clean plastics #1-7 (except styrofoam #6), paper, cardboard, glass jars, cans',
+      'Green Cart: Food scraps, spoiled food, greasy pizza boxes, shredded paper',
+      'Drop-off: Plastic bags, styrofoam, electronics, batteries, household chemicals at Recycle & Reuse Drop-off Center',
+    ],
+  },
+  {
+    id: 'london',
+    name: 'London',
+    region: 'Greater London, UK',
+    country: 'UK',
+    streamType: 'single-stream',
+    curbsideOrganics: true,
+    curbsideGlass: true,
+    acceptsPlasticBagsCurbside: false,
+    binColors: {
+      recycle: 'Green or Blue recycling bin/box (Council dependent)',
+      compost: 'Brown Food Waste Caddy',
+      trash: 'Black Bin / General Rubbish',
+    },
+    specialNotes: 'Borough councils vary slightly, but standard WRAP guidelines accept clean dry paper, cardboard, tins, plastic bottles, pots, tubs, and trays.',
+    keyRulesSummary: [
+      'Recycling: Plastic bottles, food pots, tubs, beverage cans, tins, paper & cardboard (clean & dry)',
+      'Food Caddy: All cooked and raw food scraps in compostable starch liners',
+      'No soft plastic films, crisp packets, or pet food pouches in curbside recycling (supermarket collection available)',
+    ],
+  },
+  {
+    id: 'berlin',
+    name: 'Berlin',
+    region: 'Berlin, Germany',
+    country: 'Germany',
+    streamType: 'multi-stream',
+    curbsideOrganics: true,
+    curbsideGlass: false,
+    acceptsPlasticBagsCurbside: true,
+    binColors: {
+      recycle: 'Gelbe Tonne / Wertstofftonne (Packaging & Light Materials)',
+      compost: 'Braune Bioguttonne (Organic)',
+      trash: 'Schwarze/Graue Restmülltonne (Residual Waste)',
+    },
+    specialNotes: 'BSR German Dual System (Grüner Punkt / Wertstofftonne). Bottles and cans marked with "Pfand" return logo must be returned to supermarket reverse vending machines for a cash refund (0.25€ or 0.08€). Glass bottles without deposit go to public neighborhood bottle banks (Altglascontainer) sorted by white, green, and brown.',
+    keyRulesSummary: [
+      'Pfand Deposit: Return beverage cans and bottles to supermarket machines for 8¢–25¢ deposit refund',
+      'Wertstofftonne / Gelbe Tonne: Plastic packaging, composite cartons (Tetra Pak), metal foil, empty aerosol cans',
+      'Blaue Tonne: Paper, cardboard boxes, newspapers',
+      'Glass: Take to public neighborhood bottle banks sorted by glass color (White, Green, Brown)',
+    ],
+  },
+  {
+    id: 'standard-us',
+    name: 'Standard Municipal (US/General)',
+    region: 'National Guidelines',
+    country: 'General',
+    streamType: 'single-stream',
+    curbsideOrganics: false,
+    curbsideGlass: true,
+    acceptsPlasticBagsCurbside: false,
+    binColors: {
+      recycle: 'Blue Bin (Recycle)',
+      trash: 'Grey/Black Bin (Trash)',
+    },
+    specialNotes: 'Standard municipal single-stream recycling guidelines following EPA and The Recycling Partnership best practices.',
+    keyRulesSummary: [
+      'Blue Bin: Clean plastic bottles & jugs (#1 & #2), aluminum/steel cans, flattened cardboard, clean paper',
+      'Keep it Empty, Clean & Dry to avoid contaminating truckloads',
+      'Never bag recyclables in plastic bags — keep items loose in the cart',
+      'Trash: Soft plastic wraps, styrofoam #6, greasy food boxes, ceramics, hoses, garden waste',
+    ],
+  },
+];
+
+export interface SampleItem {
+  id: string;
+  name: string;
+  category: string;
+  emoji: string;
+  description: string;
+  sampleImageUrl: string;
+}
+
+export const SAMPLE_PRESET_ITEMS: SampleItem[] = [
+  {
+    id: 'coffee-cup',
+    name: 'Takeout Coffee Cup with Lid & Sleeve',
+    category: 'Food Packaging',
+    emoji: '☕',
+    description: 'Disposable paper coffee cup with plastic sipper lid and cardboard sleeve.',
+    sampleImageUrl: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&auto=format&fit=crop&q=80',
+  },
+  {
+    id: 'pizza-box',
+    name: 'Greasy Takeaway Pizza Box',
+    category: 'Paper/Cardboard',
+    emoji: '🍕',
+    description: 'Corrugated cardboard pizza box with residual cheese and grease on the bottom.',
+    sampleImageUrl: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&auto=format&fit=crop&q=80',
+  },
+  {
+    id: 'plastic-bottle',
+    name: 'PET Water Bottle with Cap',
+    category: 'Plastics',
+    emoji: '🧴',
+    description: 'Clear plastic beverage bottle (#1 PET) with threaded cap and wrap-around label.',
+    sampleImageUrl: 'https://images.unsplash.com/photo-1558441719-f54f24b97116?w=600&auto=format&fit=crop&q=80',
+  },
+  {
+    id: 'aluminum-can',
+    name: 'Aluminum Soda Can',
+    category: 'Metals',
+    emoji: '🥫',
+    description: 'Empty aluminum beverage can with pull-tab intact.',
+    sampleImageUrl: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=600&auto=format&fit=crop&q=80',
+  },
+  {
+    id: 'bubble-mailer',
+    name: 'Padded Amazon Shipping Mailer',
+    category: 'Packaging',
+    emoji: '📦',
+    description: 'Paper exterior lined with bubble wrap plastic interior and shipping label.',
+    sampleImageUrl: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&auto=format&fit=crop&q=80',
+  },
+  {
+    id: 'lithium-battery',
+    name: 'Rechargeable AA / Lithium Battery',
+    category: 'Hazardous / E-Waste',
+    emoji: '🔋',
+    description: 'Used household lithium battery — fire hazard in standard compactor trucks.',
+    sampleImageUrl: 'https://images.unsplash.com/photo-1619725002198-6a689b72f41d?w=600&auto=format&fit=crop&q=80',
+  },
+];
